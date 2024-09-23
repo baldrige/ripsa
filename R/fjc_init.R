@@ -1,5 +1,5 @@
 load_fjc <- function(type = "civil", period = "new") {
-  trunk <- "https://www.fjc.gov/sites/default/files/idb/textfiles/"
+  library(tidyverse)
   branches <- tibble::tribble(
     ~category, ~old, ~new,
     "civil", "Civil%201970%20to%201987.zip", "cv88on.zip",
@@ -10,9 +10,10 @@ load_fjc <- function(type = "civil", period = "new") {
   coltypes <- tibble::tribble(
     ~category, ~old, ~new,
     "civil", "dcdccdddddlldlccccdlddddddcd", "dcdcdccddcccdcddllccdcccdcdccdlldddddcccccdccd",
-    "appeals", "dcccdcdcddddcddccdcccccdddddddddccccccdllldddcddcdddddddd", "dcccdcdcddcddcdcccddcccclcdddddddccccccdlclclcdddccddc"
+    "appeals", "fccclcfcddddcddccdcccccdddddddddccccccdllldddcddcdddddddd", "fccclcfcddcddcdcccddcccclcdddddddccccccdlclclcdddccddc"
   )
   # REMINDER: change to data type of dates from strings to date times
+  trunk <- "https://www.fjc.gov/sites/default/files/idb/textfiles/"
   branch <- branches |> filter(category == type) |> select(period)
   url <- paste0(trunk, branch)
   temp <- tempfile()
