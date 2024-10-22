@@ -1,5 +1,5 @@
 load_justices <- function() {
-  justicebio <- read_csv("justicebio.csv", col_types = "iccDDc")
+  justicebio <- read_csv("data/justicebio.csv", col_types = "fccDDc")
   return(justicebio)
 }
 
