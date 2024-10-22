@@ -2,10 +2,11 @@ Package: ripsa
 Type: Package
 Title: A wrapper to access public legal APIs and databases
 Version: 0.1.0
-Author: Thomas B. Bennett
-Maintainer: Thomas B. Bennett <yourself@somewhere.net>
+Authors@R: person("Thomas", "Bennett", email = "tbbennett@smu.edu", role = c("aut", "cre"), comment = c(ORCID = "0009-0002-9780-1754")) 
 Description: More about what it does (maybe more than one line)
     Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+License: GPL-3
 Encoding: UTF-8
 LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
