@@ -14,10 +14,6 @@ oyez_get_oa_audio <- function(term, docket) {
   return(files)
 }
 
-oyez_lineup <- function(term, docket) {
-
-}
-
 oyez_database <- function() {
   url <- "https://raw.githubusercontent.com/walkerdb/supreme_court_transcripts/refs/heads/master/oyez/case_summaries.json"
   case_list <- fromJSON(url) |> unnest_wider(c(citation, timeline), names_sep = "_")

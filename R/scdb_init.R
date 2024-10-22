@@ -97,8 +97,11 @@ case_lineup <- function(citation) {
       "2" ~ "Authored opinion",
       "3" ~ "Co-authored Opinion"
     )) |> 
-    gt() |> 
+    group_by(majority) |> 
+    gt(row_group_as_column = TRUE) |> 
     tab_header(title = caption, subtitle = paste0(citation, " (", year, ")")) |>
     fmt_image(columns = "image") |>
-    cols_label(image = "", majority = "Vote", vote = "Vote Type", opinion = "Opinion?")
+    cols_label(image = "", majority = "Vote", vote = "Vote Type", opinion = "Opinion?") |>
+    data_color(columns = c(vote)) |>
+    tab_style(style = cell_text(weight = "bold", v_align = "middle"), locations = cells_row_groups())
 }
