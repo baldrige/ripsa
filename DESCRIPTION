@@ -1,16 +1,12 @@
 Package: ripsa
-Title: R Ipsa Loquitur
-Version: 0.0.0.9000
-Authors@R: 
-    person("Tommy", "Bennett", , "tbbennett@smu.edu", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: Interface with common legal databases and data sources.
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+Type: Package
+Title: A wrapper to access public legal APIs and databases
+Version: 0.1.0
+Authors@R: person("Thomas", "Bennett", email = "tbbennett@smu.edu", role = c("aut", "cre"), comment = c(ORCID = "0009-0002-9780-1754")) 
+Description: More about what it does (maybe more than one line)
+    Use four spaces when indenting paragraphs within the Description.
+License: GPL-3
 Encoding: UTF-8
+LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.0.0
-Imports: 
-    dplyr,
-    httr2,
-    jsonlite
+RoxygenNote: 7.3.2

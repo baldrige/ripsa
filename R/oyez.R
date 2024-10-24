@@ -13,3 +13,8 @@ oyez_get_oa_audio <- function(term, docket) {
   files <- map(href, \(x) pluck(resp_body_json(req_perform(request(x))), "media_file", 1, "href"))
   return(files)
 }
+
+oyez_database <- function() {
+  url <- "https://raw.githubusercontent.com/walkerdb/supreme_court_transcripts/refs/heads/master/oyez/case_summaries.json"
+  case_list <- fromJSON(url) |> unnest_wider(c(citation, timeline), names_sep = "_")
+}
