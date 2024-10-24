@@ -1,11 +1,16 @@
 Package: ripsa
-Type: Package
-Title: A wrapper to access public legal APIs and databases
-Version: 0.1.0
-Author: Thomas B. Bennett
-Maintainer: Thomas B. Bennett <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Title: R Ipsa Loquitur
+Version: 0.0.0.9000
+Authors@R: 
+    person("Tommy", "Bennett", , "tbbennett@smu.edu", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: Interface with common legal databases and data sources.
+License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
+    license
 Encoding: UTF-8
-LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.0.0
+Imports: 
+    dplyr,
+    httr2,
+    jsonlite
